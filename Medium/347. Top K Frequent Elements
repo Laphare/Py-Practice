@@ -1,0 +1,21 @@
+## APPROACH 1
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counter_myname=collections.Counter(nums)
+        sorted_myname=sorted(counter_myname.items(),key=lambda x:x[1], reverse=True)
+        sss=[x[0]for x in sorted_myname[:k]]
+        return sss
+
+## APPROACH 2
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counter_myname=collections.defaultdict(int)
+        for num in nums:
+            counter_myname[num]+= 1
+        sorted_myname=sorted(counter_myname.items(),key=lambda x:x[1], reverse=True)
+        sss = []
+        for x in sorted_myname:
+            sss.append(x[0])
+            if len(sss) == k:
+                break
+        return sss
