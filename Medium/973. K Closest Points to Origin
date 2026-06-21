@@ -1,0 +1,9 @@
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        a=[]
+
+        for point in points:
+            cur_dis_sq = point[0]**2 + point[1]**2 
+            a.append((cur_dis_sq,point))
+        smallest_points = heapq.nsmallest(k,a)
+        return [point for cur_dis_sq,point in smallest_points]
