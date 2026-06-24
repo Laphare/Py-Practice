@@ -1,0 +1,11 @@
+WITH rn_list AS (
+SELECT name, salary,department_id,
+DENSE_RANK()OVER(PARTITION BY department_id ORDER BY salary DESC) AS rn 
+FROM employee 
+)
+SELECT d.department_name,e.name,e.salary
+FROM rn_list e 
+INNER JOIN department d 
+ON e.department_id= d.department_id
+WHERE rn <=3
+ORDER BY department_name, salary DESC, name
