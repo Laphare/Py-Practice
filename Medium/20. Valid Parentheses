@@ -1,0 +1,14 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        p = {')':'(','}':'{',']':'['}
+        bucket = ['#']
+
+        for sy in s:
+            if sy not in p:
+                bucket.append(sy)
+            else:
+                if bucket[-1] == p[sy]:
+                    bucket.pop()
+                else:
+                    return False
+        return True if bucket== ['#'] else False
