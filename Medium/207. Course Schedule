@@ -1,0 +1,20 @@
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        dict = {i:[]for i in range(numCourses)}
+        count=0
+        sub_count=[0]* numCourses 
+
+        for nexted,pre in prerequisites:
+            dict[pre].append(nexted)
+            sub_count[nexted] += 1
+        
+        queue = [i for i in range(numCourses) if sub_count[i]==0]
+
+        while queue:
+            course = queue.pop()
+            count += 1
+            for after_take in dict[course]:
+                sub_count[after_take] -= 1
+                if sub_count[after_take] == 0:
+                    queue.append(after_take)
+        return count == numCourses
