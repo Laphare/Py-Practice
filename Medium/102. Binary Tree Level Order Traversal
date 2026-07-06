@@ -1,0 +1,21 @@
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root:
+            return []
+        
+        queue = deque([root])
+        box = []
+
+
+        while queue:
+            tem_list = []
+
+            for _ in range(len(queue)):
+                node=queue.popleft()
+                tem_list.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            box.append(tem_list)
+        return box
