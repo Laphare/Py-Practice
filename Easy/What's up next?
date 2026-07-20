@@ -1,0 +1,9 @@
+def next_item(xs, item):
+    # TODO: Implement me
+    found = False
+    for e in xs:
+        if found == True:
+            return e
+        if item == e:
+            found = True
+    return None
