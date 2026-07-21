@@ -1,0 +1,5 @@
+def reverse_words(s):
+    x=s.split(' ')
+    a=x[::-1]
+    r=' '.join(a)
+    return r
