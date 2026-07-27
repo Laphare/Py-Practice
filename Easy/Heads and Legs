@@ -1,0 +1,14 @@
+def animals(heads, legs):
+
+    if heads < 0 or legs < 0:
+        return "No solutions"
+    
+
+    y = (legs - 2 * heads) / 2
+    x = heads - y
+    
+
+    if y.is_integer() and 0 <= y <= heads:
+        return (x, y)  
+        
+    return "No solutions"
