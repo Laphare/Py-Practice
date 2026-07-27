@@ -1,0 +1,25 @@
+def solution(arr_val, arr_unit):
+    unit_map = {
+
+        "kg": 1, 
+        "g": 1e-3, 
+        "mg": 1e-6, 
+        "μg": 1e-9,
+        "lb": 0.453592,  
+
+        "m": 1,  
+        "cm": 1e-2, 
+        "mm": 1e-3, 
+        "μm": 1e-6,
+        "ft": 0.3048    
+    }
+    
+
+    m1 = arr_val[0] * unit_map.get(arr_unit[0], 1)
+    m2 = arr_val[1] * unit_map.get(arr_unit[1], 1)
+    r  = arr_val[2] * unit_map.get(arr_unit[2], 1)  
+    
+
+    G = 6.67e-11
+    
+    return G * (m1 * m2) / (r ** 2)
