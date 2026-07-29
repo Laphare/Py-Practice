@@ -1,0 +1,10 @@
+def most_frequent_item_count(collection):
+    if len(collection) == 0:
+        return 0
+    x = {}
+    for i in collection:
+        if i not in x:
+            x[i]=1
+        else:
+            x[i] += 1
+    return max(x.values())
