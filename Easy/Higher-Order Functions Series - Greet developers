@@ -1,0 +1,4 @@
+def greet_developers(lst): 
+    for person in lst:
+        person["greeting"] = (f'Hi {person["firstName"]}, what do you like the most about {person["language" ]}?')
+    return lst
