@@ -1,0 +1,3 @@
+def is_ruby_coming(lst): 
+
+    return any(user["language"] == "Ruby" for user in lst)
