@@ -1,0 +1,4 @@
+def is_same_language(lst): 
+    first_l = lst[0]["language"]
+    return all(user["language"]==first_l for user in lst)
+        
