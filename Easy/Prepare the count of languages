@@ -1,0 +1,6 @@
+def count_languages(lst): 
+    x={}
+    for user in lst:
+        x[user["language"]] = x.get(user["language"],0)+1
+    return x
+        
