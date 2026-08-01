@@ -1,0 +1,10 @@
+from preloaded import LinkedList
+
+def list_to_array(node: LinkedList) -> list:
+    current = node
+    x = []
+    while current:
+        x.append(current.value)
+        current = current.next
+        
+    return x
