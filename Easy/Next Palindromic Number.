@@ -1,0 +1,7 @@
+def next_pal(val):
+    s= val + 1
+    while True:
+        if str(s)[::-1] ==  str(s):
+            return s
+        s += 1
+        
