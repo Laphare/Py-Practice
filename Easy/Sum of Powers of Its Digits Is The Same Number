@@ -1,0 +1,7 @@
+def eq_sum_powdig(h_max, exp):
+    result = []
+    for x in range(2,h_max+1):
+
+        if sum(int(dig)**exp for dig in str(x)) == x:
+            result.append(x)
+    return result
