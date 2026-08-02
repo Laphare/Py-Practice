@@ -1,0 +1,6 @@
+def order_food(lst): 
+    x={}
+    
+    for user in lst:
+        x[user["meal"]] = x.get(user["meal"],0)+1
+    return x
