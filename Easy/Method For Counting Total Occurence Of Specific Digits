@@ -1,0 +1,10 @@
+class List(object):
+    def count_spec_digits(self, integers_list, digits_list):
+        x={}
+        for num in digits_list:
+            
+            total = 0
+            for dig in integers_list:
+                total += str(dig).count(str(num))
+            x[num] = total  
+        return list(x.items())
