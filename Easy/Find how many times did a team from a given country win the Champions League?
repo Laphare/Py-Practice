@@ -1,0 +1,2 @@
+def count_wins(winners_list, country):
+    return sum(1 for user in winners_list if user["country"] == country)
