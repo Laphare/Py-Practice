@@ -1,0 +1,10 @@
+def find_lowest_int(k):
+    n=1
+
+    while True:
+        if sorted(str(k*n)) != sorted(str((k+1)*n)):
+            n += 1
+        else:
+            break
+    return n
+            
