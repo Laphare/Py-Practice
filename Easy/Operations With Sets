@@ -1,0 +1,11 @@
+def process_2arrays(arr1, arr2):
+    # your code here
+    s1 = set(arr1)
+    s2 = set(arr2)
+    
+    both = s1 & s2 
+    only = s1 ^ s2
+    r_1 =s1 -s2
+    r_2 = s2-s1
+    
+    return[len(both), len(only), len(r_1), len(r_2)]
