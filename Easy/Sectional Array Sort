@@ -1,0 +1,10 @@
+def sect_sort(arr,start,length=None):
+    if length is None or length <= 0:
+        x = arr[start:]
+        x.sort()
+        y = []
+    else:
+        x = arr[start:start+length]
+        x.sort()
+        y = arr[start+length:]
+    return arr[:start] + x + y
