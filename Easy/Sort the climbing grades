@@ -1,0 +1,12 @@
+def sort_grades(lst):
+    if lst is None:
+        return []
+    def convert_grades(g):
+        if g == "VB":
+            return -2
+        if g == "V0":
+            return -1
+        if g == "V0+":
+            return 0
+        return int(g[1:])
+    return sorted(lst,key = convert_grades)
