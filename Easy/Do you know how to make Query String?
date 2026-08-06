@@ -1,0 +1,11 @@
+def to_query_string(data):
+    # your solution here
+    z = []
+    for key,value in data.items():
+    
+        if isinstance(value,list):
+            for x in value:
+                z.append (f"{key}={x}")
+        else:
+            z.append(f"{key}={value}")
+    return "&".join(z)
