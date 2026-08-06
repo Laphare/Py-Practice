@@ -1,0 +1,23 @@
+class CircularList():
+   
+    def __init__(self, *args):
+        # your code
+        if not args:
+            raise ValueError("CircularList cannot be empty!")
+        self.item = list(args)    
+        self.size = len(args)
+        self.index = -1
+            
+    def next(self):
+        # your code
+        self.index += 1
+        if self.index == self.size:
+            self.index = 0
+        return self.item[self.index]
+                
+
+    def prev(self):
+        self.index -= 1
+        if self.index < 0:
+            self.index = self.size-1
+        return self.item[self.index]
