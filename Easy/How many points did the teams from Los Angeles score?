@@ -1,0 +1,16 @@
+import re
+def get_los_angeles_points(results):
+    
+    total_points = 0
+    
+    pattern = r"^Los Angeles [A-Z][a-z]+$"
+    
+    
+    for team, score_str in results:
+
+        if re.match(pattern, team):
+
+            scored = int(score_str.split(":")[0])
+            total_points += scored
+
+    return total_points
