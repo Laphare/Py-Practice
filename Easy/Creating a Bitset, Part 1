@@ -1,0 +1,3 @@
+def byte_to_set(byte):
+    b_str = f"{byte:08b}"
+    return {x for x,i in enumerate(b_str) if i =="1"}
