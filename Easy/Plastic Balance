@@ -1,0 +1,5 @@
+def plastic_balance(lst):
+    # Do some botato :)
+    while lst and lst[0]+lst[-1] != sum(lst[1:-1]):
+        lst = lst[1:-1]
+    return lst
