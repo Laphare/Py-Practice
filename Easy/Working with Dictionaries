@@ -1,0 +1,24 @@
+from preloaded import A001055 # to remember you the name of the database
+
+def inf_database(range_, str_, val):
+    # your code here
+    cond = {"equals to", "higher than", "lower than", "higher and equals to", "lower and equals to"}
+    if str_ not in cond:
+        return "wrong constraint"
+    
+    a,b = range_
+    
+    matched_numbers = []
+    
+    for num in range(a,b+1):
+        if num in A001055:
+            x = A001055[num]
+            if ((str_ == "equals to" and A001055[num] == val) or 
+                (str_ == "higher than" and A001055[num] > val) or
+                (str_ == "lower than" and A001055[num] < val) or 
+                (str_ == "higher and equals to" and A001055[num]>= val) or
+                (str_ == "lower and equals to" and A001055[num]<= val)):
+                 matched_numbers.append(num)
+            
+    
+    return (len(matched_numbers),matched_numbers)
