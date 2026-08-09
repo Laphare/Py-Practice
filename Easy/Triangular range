@@ -1,0 +1,11 @@
+def triangular_range(start, stop):
+    n=1
+    x={}
+    while True:
+        t_n = n *(n+1) //2
+        if start <= t_n <= stop:
+            x[n] = t_n
+        elif  t_n > stop:
+            break
+        n += 1
+    return x
