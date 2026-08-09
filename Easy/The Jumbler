@@ -1,0 +1,8 @@
+def jumbler(indices):
+    c = 0
+    while indices[0] != 0:
+        pop_value = indices.pop(indices[0])
+        indices.insert(0,pop_value)
+        
+        c += 1
+    return c
