@@ -1,0 +1,24 @@
+from preloaded import Node
+
+# Node is defined in preloaded:
+# class Node:
+#     def __init__(self, data):
+#        self.data = data
+#        self.next = None
+
+def length(node: Node | None) -> int:
+    current = node
+    count = 0
+    while current:
+        current = current.next
+        count += 1
+    return count
+
+def count(node: Node | None, data) -> int:
+    current = node
+    count = 0
+    while current:
+        if current.data == data:
+            count += 1
+        current = current.next
+    return count
