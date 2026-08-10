@@ -1,0 +1,15 @@
+def tribonacci(signature, n):
+    x = signature
+    
+    if n==0:
+        return []    
+    
+    elif n <3:
+        return signature[:n]
+    
+
+    
+    for i in range (3,n):
+        num = x[i-3]+x[i-2]+x[i-1]
+        x.append(num)
+    return x
