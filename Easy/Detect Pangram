@@ -1,0 +1,8 @@
+import string
+def is_pangram(st):
+    st_lower = st.lower()
+    
+    for s in string.ascii_lowercase:
+        if s not in st_lower:
+            return False
+    return True
