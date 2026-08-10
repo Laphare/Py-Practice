@@ -1,0 +1,4 @@
+def create_phone_number(n):
+    x = "".join(map(str,n))
+    return f"({x[:3]}) {x[3:6]}-{x[6:10]}"
+    #your code here
