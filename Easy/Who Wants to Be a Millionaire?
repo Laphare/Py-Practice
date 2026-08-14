@@ -1,0 +1,24 @@
+def get_total_cash_prize(prize_fund, correct_answers, player_actions):
+    
+    haven_prize = (0,sum(prize_fund[0:5]),sum(prize_fund[0:10]))
+    cumulate_prize = 0
+    ll_used = 0
+    
+    for i in range(len(player_actions)):
+        
+        for j in range(len(player_actions[i])):
+                if player_actions[i][j].isdigit():
+                    ll_used += 1  
+        
+        if correct_answers[i] == player_actions[i][-1]:
+            
+            cumulate_prize += prize_fund[i]
+                    
+        elif player_actions[i][-1] == "W":
+            return (cumulate_prize,ll_used)
+        elif player_actions[i][-1] == "X":
+            return (haven_prize[i//5],ll_used)
+        else:
+            return (0,ll_used)
+        
+    return (cumulate_prize,ll_used)
