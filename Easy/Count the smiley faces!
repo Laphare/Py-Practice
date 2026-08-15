@@ -1,0 +1,8 @@
+def count_smileys(arr):
+    count = 0
+    for x in arr:
+        if len(x) == 2 and x[0] in[":",";"] and x[-1] in [")","D"]:
+            count += 1
+        elif len(x) == 3 and x[0] in[":",";"] and x[-1] in [")","D"] and x[1] in ["-","~"]:
+            count += 1
+    return count
