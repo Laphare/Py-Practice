@@ -1,0 +1,4 @@
+def duplicate_count(text):
+    # Your code goes here
+    text =text.lower() 
+    return len({char for char in text if text.count(char) > 1 })
