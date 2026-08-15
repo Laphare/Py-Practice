@@ -1,0 +1,4 @@
+def camel_case(s):
+    words = s.split(" ")
+    l = [x.capitalize() for x in words]
+    return "".join(l)1
