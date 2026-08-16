@@ -1,0 +1,9 @@
+def order(sentence):
+  # code here
+    x = sentence.split()
+    w = { }
+    for word in x:
+        for i in word:
+            if i.isdigit():
+                w[int(i)]=word
+    return " ".join(w[i] for i in sorted(w))
