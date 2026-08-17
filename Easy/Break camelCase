@@ -1,0 +1,9 @@
+def solution(s):
+    r = []
+    start = 0
+    for i in range(len(s)):
+        if s[i].isupper():
+            r.append(s[start:i])
+            start = i
+    r.append(s[start:])    
+    return " ".join(r)
