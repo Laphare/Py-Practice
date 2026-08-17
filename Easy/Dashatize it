@@ -1,0 +1,4 @@
+def dashatize(n):
+    n = str(n).strip("-")
+    x= "".join("-"+c+"-" if int(c) %2 ==1 else c for c in n).strip("-")
+    return x.replace("--","-")
