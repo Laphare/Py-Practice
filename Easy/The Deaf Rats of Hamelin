@@ -1,0 +1,13 @@
+def count_deaf_rats(town):
+    
+    x = town.replace(" ","").split("P")
+    left = x[0]
+    right = x[-1]
+    count =0
+    for i in range(0,len(left),2):
+        if left[i:i+2] != "~O":
+            count += 1
+    for i in range(0,len(right),2):
+         if right[i:i+2] != "O~":
+            count += 1    
+    return count
