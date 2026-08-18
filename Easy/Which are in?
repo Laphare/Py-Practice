@@ -1,0 +1,9 @@
+def in_array(array1, array2):
+    # your code
+    x=[]
+    for i in array1:
+        for j in array2:
+            if i in j:
+                x.append(i)
+                break
+    return sorted(set(x))
