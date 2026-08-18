@@ -1,0 +1,6 @@
+import re
+class FileNameExtractor:
+    @staticmethod
+    def extract_file_name(dirty_file_name):
+        x=re.search(r"\d+_(.+\.[^.]+)\.",dirty_file_name)
+        return x.group(1)
