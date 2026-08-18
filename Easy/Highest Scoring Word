@@ -1,0 +1,8 @@
+def high(x):
+    # Code here
+    l = x.split()
+    r=[]
+    for word in l:
+        amount = sum((ord(char)-ord("a")+1) for char in word)
+        r.append(amount)
+    return l[r.index(max(r))]
