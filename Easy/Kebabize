@@ -1,0 +1,6 @@
+import re
+def kebabize(st):
+    x = re.sub(r"([A-Z])",r"-\1",st)
+    x = re.sub(r"(\d)","",x)
+    x = re.sub(r"(^-+|-+$)","",x)
+    return x.lower()
