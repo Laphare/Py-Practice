@@ -1,0 +1,6 @@
+def all_continents(lst): 
+    set_g = {"Africa", "Americas", "Asia", "Europe", "Oceania"}
+    set_d = set()
+    for d in lst:
+        set_d.add(d["continent"])
+    return set_g == set_d    
