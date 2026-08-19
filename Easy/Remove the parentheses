@@ -1,0 +1,6 @@
+import re
+def remove_parentheses(st):
+    r = re.compile(r"\([a-zA-Z ]*\)")
+    while r.search(st):
+        st = r.sub("",st)
+    return st
