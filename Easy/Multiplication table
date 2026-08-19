@@ -1,0 +1,10 @@
+def multiplication_table(size):
+
+    x = []
+    for i in range(size):
+        row = []
+        for j in range(size):
+            row.append((j+1)*(i+1))
+        x.append(row)
+                     
+    return x
