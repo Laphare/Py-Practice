@@ -1,0 +1,16 @@
+import re
+def is_valid_coordinates(coordinates):
+    c = coordinates.split(",")
+    
+    if len(c) != 2:
+        return False
+    
+    Latitude = c[0].strip()
+    Longitude = c[1].strip()
+    
+    
+    if re.fullmatch(r"-?\d+\.?\d*",Latitude) and re.fullmatch(r"-?\d+\.?\d*",Longitude):
+        if -90 <= float(Latitude) <=90 and -180 <= float(Longitude) <= 180:
+            return True
+    return False
+    
