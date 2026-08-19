@@ -1,0 +1,29 @@
+from math import gcd, lcm
+def gcdi(x,y):
+    # your code
+    return gcd(abs(x), abs(y) )
+
+def lcmu(a, b):
+    # your code
+    return lcm(abs(a), abs(b) )
+        
+def som(a, b):
+    # your code
+    return a+b
+    
+def maxi(a, b):
+    # your code
+    return max(a, b)
+
+def mini(a, b):
+    # your code
+    return min(a,b)
+
+def oper_array(fct, arr, init): 
+    # your code
+    r = []
+    for i in range(len(arr)):
+        init = fct(init,arr[i])
+        r.append(init)
+    
+    return r
