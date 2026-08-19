@@ -1,0 +1,6 @@
+def queue_time(customers, n):
+    chaser = [0]*n
+    for customer in customers:
+        i = chaser.index(min(chaser))
+        chaser[i] += (customer)
+    return max(chaser)
