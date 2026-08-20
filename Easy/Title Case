@@ -1,0 +1,11 @@
+def title_case(title, minor_words=''):
+    x = title.split(" ")
+    minor_words = minor_words.lower().split(" ")
+    r = []
+    r.append(x[0].capitalize())
+    for i in range(1,len(x)):
+        if x[i].lower() in minor_words:
+            r.append(x[i].lower())
+        else:
+            r.append(x[i].capitalize())
+    return " ".join(r)
