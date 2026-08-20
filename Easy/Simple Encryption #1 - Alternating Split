@@ -1,0 +1,21 @@
+def decrypt(encrypted_text, n):
+    for c in range(n):
+        m_i = len(encrypted_text)//2
+        bei = encrypted_text[m_i:][-1]
+        odd = len(encrypted_text) %2
+        encrypted_text = "".join(a+b for a,b in zip(encrypted_text[m_i:],
+        encrypted_text[:m_i]))
+        
+        if odd:
+            encrypted_text += bei
+    return encrypted_text    
+
+def encrypt(text, n):
+    if n <0:
+        return text
+    i=0
+    
+    while i != n:
+        text = text[1::2]+text[0::2]
+        i+= 1
+    return text
