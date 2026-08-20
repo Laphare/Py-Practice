@@ -1,0 +1,8 @@
+def data_reverse(data):
+    r = []
+    z = []
+    for x in range(0,len(data),8):
+        r.append(data[x:x+8])
+    for g in r[::-1]:
+        z.extend(g)
+    return z
