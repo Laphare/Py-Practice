@@ -1,0 +1,4 @@
+import re
+def autocorrect(input):
+    
+    return re.sub((r"\byou+\b|\bu\b"),"your sister",input,flags=re.IGNORECASE)
