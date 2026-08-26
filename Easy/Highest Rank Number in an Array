@@ -1,0 +1,5 @@
+def highest_rank(arr):
+    x={}
+    for n in arr:
+        x[n]=x.get(n,0)+1
+    return sorted(x,key=lambda n: (x[n],n),reverse=True)[0]
