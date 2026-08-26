@@ -1,0 +1,11 @@
+import re
+
+def autocomplete(input_, dictionary):
+    input_ = re.sub(r"[^a-zA-Z]", "", input_)
+    
+    res = []
+    for x in dictionary:
+        if re.match(rf"^{input_}", x, flags=re.IGNORECASE):
+            res.append(x)
+    
+    return res[:5]
