@@ -1,0 +1,15 @@
+def rev_rot(strng, sz):
+    # your code
+    res=""
+    if sz<=0 or strng == "" or sz > len(strng):
+        return ""
+
+    for x in range(0,len(strng),sz):
+        chunk = strng[x:x+sz]
+        if sum(int(y) for y in chunk) %2 == 0:
+            chunk = chunk[::-1]
+        else:
+            chunk = chunk[1:]+chunk[0]
+        if len(chunk) == sz:
+            res += chunk
+    return res
