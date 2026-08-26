@@ -1,0 +1,11 @@
+
+def solve(s):
+    total =0
+    h=0
+    for char in s:
+        if char not in "aeiou":
+            total += ord(char)-ord("a")+1
+            h = max(h,total)
+        else:
+            total = 0
+    return h
