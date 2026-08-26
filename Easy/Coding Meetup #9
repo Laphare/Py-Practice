@@ -1,0 +1,9 @@
+def is_age_diverse(lst): 
+    # your code here
+    res=[]
+    for x in lst:
+        if 10<=x["age"] <100:
+            res.append( x["age"]//10)
+        else:
+            res.append(10)
+    return len(set(res)) == 10
