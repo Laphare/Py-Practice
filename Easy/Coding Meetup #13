@@ -1,0 +1,7 @@
+def is_language_diverse(lst): 
+    # your code here
+    x={}
+    for c in lst:
+        x[c["language"]] = x.get(c["language"],0) +1
+        
+    return max(x.values())<=min(x.values())*2
