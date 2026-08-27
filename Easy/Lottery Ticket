@@ -1,0 +1,8 @@
+def bingo(ticket,win):
+    i=[]
+    for g in ticket:
+        for char in g[0]:
+            if ord(char) == g[1]:
+                i.append(g[1])
+                break
+    return "Winner!" if len(i) >=win else "Loser!"
