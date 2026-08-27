@@ -1,0 +1,9 @@
+def clean_string(s):
+    # your code here
+    res=[]
+    for char in s:
+        if char != "#":
+            res.append(char)
+        elif res:
+            res.pop()
+    return "".join(res)
