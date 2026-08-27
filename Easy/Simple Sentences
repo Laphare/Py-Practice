@@ -1,0 +1,7 @@
+import re
+def make_sentences(parts):
+    x = " ".join(parts)
+    x = re.sub(r"\.","",x)
+    x = re.sub(r" +"," ",x)
+    x = re.sub(r" ,",",",x)
+    return x.strip()+"."
