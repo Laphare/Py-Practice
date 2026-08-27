@@ -1,0 +1,10 @@
+def xbonacci(signature, n):
+    if n==0 or signature==[]:
+        return []
+    x = len(signature)
+    res = signature.copy()
+    i = x
+    while i <n:
+        res.append(sum(res[-x:]))
+        i += 1
+    return res[:n]
