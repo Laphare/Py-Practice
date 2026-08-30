@@ -1,0 +1,11 @@
+import re
+def abbreviate(s):  
+    x=[]
+    result = re.findall(r'[A-Za-z]+|[^A-Za-z]', s)
+    for w in result:
+        if len(w) <4:
+            x.append(w)
+        elif len(w)>=4 and w[0].isalpha():
+            x.append("".join([w[0],str(len(w)-2),w[-1]]))
+                
+    return "".join(x)
