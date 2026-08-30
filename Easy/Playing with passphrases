@@ -1,0 +1,24 @@
+def play_pass(s, n):
+    s=s.lower()
+    i = ord("a")
+    j = ord("z")
+    x=[]
+    for char in s:
+        if char.isalpha():
+            t = ord(char)+n%26
+            if t > j:
+                t=t-j+i-1
+            x.append(chr(t))
+            
+        elif char.isdigit():
+            t = 9 - int(char)
+            x.append(str(t))
+        else:
+            x.append(char)
+    for ind in range((len(x))):
+        if ind %2 == 0 :
+            x[ind] = x[ind].upper()
+        elif ind %2 == 1:
+            
+            x[ind] = x[ind].lower()
+    return "".join(x)[::-1]
