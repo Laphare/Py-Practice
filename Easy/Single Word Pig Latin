@@ -1,0 +1,17 @@
+import re
+def pig_latin(s):
+    s=s.lower()
+    
+    if re.search(r"[^a-zA-Z]",s) or s == "":
+        return None
+    
+    
+    if re.match(r"[aeiou]",s) :
+        return s+"way"
+    
+    if not re.search(r"[aeiou]",s):
+        return s+"ay"
+    
+    while not re.match(r"[aeiou]",s):
+        s=s[1:] +s[0]
+    return s+"ay"
