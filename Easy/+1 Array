@@ -1,0 +1,12 @@
+def up_array(arr):
+    if arr == []:
+        return None
+    for num in arr:
+        if num <0 or num>9:
+            return None
+        else:
+            x = sum(num*(10**(len(arr)-i-1)) for i, num in enumerate(arr))
+    x = str(x+1).zfill(len(arr))
+    
+    
+    return list(int(numbers) for numbers in x)
