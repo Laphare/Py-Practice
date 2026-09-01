@@ -1,0 +1,19 @@
+def longest_repetition(chars):
+    if not chars:
+        return ("", 0)
+
+    current = 1
+    best = 1
+    result = chars[0]
+
+    for i in range(1, len(chars)):
+        if chars[i] == chars[i - 1]:
+            current += 1
+        else:
+            current = 1
+
+        if current > best:
+            best = current
+            result = chars[i]
+
+    return (result, best)
