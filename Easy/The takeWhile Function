@@ -1,0 +1,10 @@
+def take_while(sequence, predicate):
+    result = []
+
+    for x in sequence:
+        if predicate(x):
+            result.append(x)
+        else:
+            break
+
+    return result
