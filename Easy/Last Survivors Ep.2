@@ -1,0 +1,19 @@
+def last_survivors(string: str) -> str:
+    chars = list(string)
+    i = 0
+    while i < len(chars):
+        c = chars[i]
+
+        if chars.count(c) >= 2:
+
+            chars.remove(c)
+            chars.remove(c)
+
+            next_char = 'a' if c == 'z' else chr(ord(c) + 1)
+            chars.append(next_char)
+
+            i = 0
+        else:
+            i += 1
+            
+    return "".join(chars)
