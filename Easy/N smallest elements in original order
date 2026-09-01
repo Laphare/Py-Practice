@@ -1,0 +1,10 @@
+def first_n_smallest(arr, n):
+    if n == 0:
+        return []
+    r = []
+    for i,num in enumerate(arr):
+        r.append((num,i))
+    r.sort(key=lambda x:x[0])
+    r = r[:n]
+    r.sort(key=lambda x:x[1])
+    return [res[0] for res in r]
