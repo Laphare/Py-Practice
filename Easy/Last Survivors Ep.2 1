@@ -1,0 +1,9 @@
+import re
+def last_survivors(string):
+    while len(set(string)) != len(string):
+        string = re.sub(
+            r"(.)(.*)\1",
+            lambda x: chr(((ord(x.group(1))-ord("a")+1)%26+ord("a"))) + x.group(2),
+            string
+        )
+    return string
