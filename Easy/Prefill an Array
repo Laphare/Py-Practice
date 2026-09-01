@@ -1,0 +1,13 @@
+def prefill(n=None, v=None):
+    if n is None or isinstance(n, bool):
+        raise TypeError
+
+    if isinstance(n, str):
+        if not n.isdigit():
+            raise TypeError
+        n = int(n)
+
+    if not isinstance(n, int) or n<0:
+        raise TypeError
+
+    return [v] * n
