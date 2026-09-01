@@ -1,0 +1,3 @@
+import re
+def search(titles, term): 
+    return [x for x in titles if re.search(term,x,re.IGNORECASE)]
