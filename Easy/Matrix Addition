@@ -1,0 +1,10 @@
+def matrix_addition(a, b):
+
+    x = len(a)
+    res=[]
+    for i in range(x):
+        r = []
+        for j in range(x):
+            r.append(a[i][j]+b[i][j])
+        res.append(r)
+    return res
