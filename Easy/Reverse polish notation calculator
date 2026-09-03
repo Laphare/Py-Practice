@@ -1,0 +1,25 @@
+
+
+def calc(expr):
+    if expr == "":
+        return 0
+
+    r = []
+    e = expr.split(" ")
+
+    for char in e:
+        if char not in "+-*/":
+            r.append(float(char))
+        else:
+            b = r.pop()
+            a = r.pop()
+
+            if char == "+":
+                r.append(a + b)
+            elif char == "-":
+                r.append(a - b)
+            elif char == "*":
+                r.append(a * b)
+            elif char == "/":
+                r.append(a / b)
+    return r[0]
