@@ -1,0 +1,9 @@
+class Solution:
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+        for i in range ((min(len(str1),len(str2))+1),0,-1):
+            con = str1[:i]
+            if (con*(len(str1) // len(con)) == str1 and
+                con*(len(str2) // len(con)) == str2 ):
+                return con
+         
+        return ""
