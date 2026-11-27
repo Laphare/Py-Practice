@@ -1,0 +1,12 @@
+class Solution:
+    def equalPairs(self, grid: list[list[int]]) -> int:   
+        p_grid = zip(*grid)
+        pre_dic = {}
+        for l in grid:
+            n = tuple(l)
+            pre_dic[n] = pre_dic.get(n,0) +1
+        
+        count = 0
+        for i in p_grid:
+            count += pre_dic.get(i,0)
+        return count
