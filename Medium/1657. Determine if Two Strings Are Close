@@ -1,0 +1,11 @@
+class Solution:
+    def closeStrings(self, word1: str, word2: str) -> bool:
+        n1 = {}
+        n2={}
+        for w1 in word1:
+            n1[w1] = n1.get(w1,0)+1
+        for w2 in word2:
+            n2[w2] = n2.get(w2,0)+1
+        if set(n1.keys()) != set(n2.keys()):
+            return False
+        return sorted(n1.values()) == sorted(n2.values())
